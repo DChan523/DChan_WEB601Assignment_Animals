@@ -30,7 +30,7 @@ export class AnimalList {
         <div><img src= "${animal.imgURL}"></div><br>
         <div>Type:${animal.type}</div><br>`;
         }
-        else return "<h2>Oopsie Woopsie you've done a baddie</h2>";
+        else return "<h2>Oopsie Woopsie you've done a baddie waddie</h2>";
         
     }
 }
