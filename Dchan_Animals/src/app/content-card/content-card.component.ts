@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IAnimals } from '../helper-files/content-interface';
 
 @Component({
   selector: 'app-content-card',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-card.component.scss']
 })
 export class ContentCardComponent implements OnInit {
-  
+  @Input() animal?:IAnimals
   
   constructor() {
     
