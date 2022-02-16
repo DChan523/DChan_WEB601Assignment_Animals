@@ -1,4 +1,4 @@
-interface IAnimals{
+export interface IAnimals{
     id:number
     title:string
     description:string

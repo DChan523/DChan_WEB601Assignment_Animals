@@ -1,4 +1,6 @@
-class AnimalList {
+import { IAnimals } from "./content-interface";
+
+export class AnimalList {
     private _animals: IAnimals[] //private class of animals _ is common naming convention for private items
 
     constructor() {
@@ -21,10 +23,10 @@ class AnimalList {
     displaycontent(i:number) {  //index i
         let animal = this._animals[i];      //sets animal = to the animal array at index i
         //returns each value of animal 
-        return `<div>${animal.title}</div>
-                <div>${animal.description}</div>
-                <div>${animal.creator}</div>
-                <div><img src= "${animal.imgURL}"></div>
-                <div>${animal.type}</div>`;
+        return `<h1>Title:${animal.title}</h1><br>
+                <div>Description:${animal.description}</div>
+                <div>Creator:${animal.creator}</div><br>
+                <div><img src= "${animal.imgURL}"></div><br>
+                <div>Type:${animal.type}</div><br>`;
     }
 }
