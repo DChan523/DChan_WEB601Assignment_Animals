@@ -64,6 +64,14 @@ export class ContentListComponent implements OnInit {
       imgURL:"https://2.bp.blogspot.com/-90OMNRv53r4/XBIfQuaAz_I/AAAAAAAAiAE/D8YOi38r1PUkCXDu5h1yAM4WNI8Z0aRwQCLcBGAs/s1600/live%2Bin%2Bdarkness.jpg",
       type:"Speedster",
       tags:["Sanic speed","Sanic","I am speed"]
+    },
+    {
+      id:7,
+      title:"Blue Devil",
+      description:"Gotta go fast",
+      creator:"Wolfgang Amadeus mozart",
+      imgURL:"https://2.bp.blogspot.com/-90OMNRv53r4/XBIfQuaAz_I/AAAAAAAAiAE/D8YOi38r1PUkCXDu5h1yAM4WNI8Z0aRwQCLcBGAs/s1600/live%2Bin%2Bdarkness.jpg",
+      tags:["Sanic speed","Sanic","I am speed"]
     }];
   }
 
