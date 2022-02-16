@@ -43,6 +43,15 @@ export class ContentCardComponent implements OnInit {
       type:"lemur",
       tags:["lemur","Zoboomafoo","beans"]
     });
+    this.animoo.add({ //adds new animal to the array
+      id:4,
+      title:"lemur",
+      description:"likes garbonzo beans",
+      creator:"god",
+      imgURL:"https://i.imgur.com/lETaPrS.jpg?1",
+      type:"lemur",
+      tags:["lemur","Zoboomafoo","beans"]
+    });
   }
 
   ngOnInit(): void {

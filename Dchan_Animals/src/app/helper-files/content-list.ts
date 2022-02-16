@@ -22,11 +22,15 @@ export class AnimalList {
 
     displaycontent(i:number) {  //index i
         let animal = this._animals[i];      //sets animal = to the animal array at index i
-        //returns each value of animal 
+        if(this._animals.length > i){
+            //returns each value of animal 
         return `<h1>Title:${animal.title}</h1><br>
-                <div>Description:${animal.description}</div>
-                <div>Creator:${animal.creator}</div><br>
-                <div><img src= "${animal.imgURL}"></div><br>
-                <div>Type:${animal.type}</div><br>`;
+        <div>Description:${animal.description}</div><br>
+        <div>Creator:${animal.creator}</div><br>
+        <div><img src= "${animal.imgURL}"></div><br>
+        <div>Type:${animal.type}</div><br>`;
+        }
+        else return "<h2>Oopsie Woopsie you've done a baddie</h2>";
+        
     }
 }
