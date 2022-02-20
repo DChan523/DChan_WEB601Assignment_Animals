@@ -5,7 +5,7 @@
     <div>Description:{{animal.description}}</div>
     <div>Creator:{{animal.creator}}</div>
     <div *ngIf="animal.type">
-        <span appHoverAffect colour="magenta">Type:{{animal.type}}</span>
+        <span appHoverAffect [eggs]>Type:{{animal.type}}</span>
     </div>
     <div *ngIf="animal.tags">
         <span appHoverAffect class="tag" *ngFor="let tag of animal.tags">{{tag}}</span>
