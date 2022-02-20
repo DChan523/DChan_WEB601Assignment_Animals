@@ -1,8 +1,13 @@
 <marquee *ngIf="animal">
     <h1>Title:{{animal.title}}</h1><br>
-    <img *ngIf="animal.imgURL "[src]="animal.imgURL">
+    <img *ngIf="animal.imgURL"[src]="animal.imgURL">
+    <img *ngIf="!animal.imgURL" src="https://tonsmb.org/wp-content/uploads/2014/03/default-placeholder.png">    
     <div>Description:{{animal.description}}</div>
     <div>Creator:{{animal.creator}}</div>
-    <div *ngIf="animal.type">Type:{{animal.type}}</div>
-    <div *ngIf="animal.tags">Tags:{{animal.tags}}</div><br>
+    <div *ngIf="animal.type">
+        <span appHoverAffect colour="magenta">Type:{{animal.type}}</span>
+    </div>
+    <div *ngIf="animal.tags">
+        <span appHoverAffect class="tag" *ngFor="let tag of animal.tags">{{tag}}</span>
+    </div><br>
 </marquee>
