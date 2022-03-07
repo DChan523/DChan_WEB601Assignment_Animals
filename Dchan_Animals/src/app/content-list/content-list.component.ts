@@ -72,9 +72,28 @@ export class ContentListComponent implements OnInit {
       imgURL:"https://i.kym-cdn.com/entries/icons/original/000/000/246/copy.jpg",
       tags:["spaghetti","Sauce","Veggie Tales"]
     }];
+
+    let pwomiseUwU = new Promise((success,fail)=>{
+      success("tomato potato eggplant tofu corn carrot");
+      fail("poutine pizza sushi taco donut cookie");
+    });
+
+    pwomiseUwU
+      .then(function(successMessage){
+        console.log("WAOW AMAZING WORK ", successMessage)
+      })
+
+      .catch(function(failureMessage){
+        console.log(" Ya done goofed you ", failureMessage)
+      });
   }
 
+  addAnimalToList(newAnimoo:IAnimals){
+    this.animells.push(newAnimoo);
+  }
+  
   ngOnInit(): void {
   }
+  
 
 }

@@ -27,6 +27,7 @@ export class CreateContentComponent implements OnInit {
       type:type,
     };
     //emit emits a value...
+    //after some deeep thoughts i believe this is what acurally sends the data to the parent element
     this.newAnimalEvent.emit(this.newAnimal);
   }
 }
