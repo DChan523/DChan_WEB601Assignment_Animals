@@ -1,0 +1,27 @@
+<div>
+    id: <input #id>
+</div>
+<div>
+    title: <input #title>
+</div>
+
+<div>
+    image: <input #imgURL>
+</div>
+<div>
+    description: <input #description>
+</div>
+<div>
+    creator: <input #creator>
+</div>
+<div>
+    type: <input #type>
+</div>
+
+<div>
+    tags: <input #tags>
+</div>
+<br>
+<div>
+    <button (click)="addContent(id.value, title.value, imgURL.value, description.value,creator.value,type.value)">Add Animal</button>
+</div>
