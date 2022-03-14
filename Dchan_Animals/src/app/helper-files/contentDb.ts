@@ -62,4 +62,3 @@ import { IAnimals } from "./content-interface";
       imgURL:"https://i.kym-cdn.com/entries/icons/original/000/000/246/copy.jpg",
       tags:["spaghetti","Sauce","Veggie Tales"]
     }];
-  }
