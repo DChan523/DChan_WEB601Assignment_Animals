@@ -2,25 +2,29 @@ import { Injectable } from '@angular/core';
 import { IAnimals } from '../helper-files/content-interface';
 import { animells } from '../helper-files/contentDb';
 import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AnimalServiceService {
 
-  constructor() { }
+  private httpOptions = {
+    headers: new HttpHeaders({'Content-type':'application/json'})
+  }
 
-  //this one is a no bueno causes its synchronous
-  getContent():IAnimals[]{
-    return animells;
+  constructor(private http:HttpClient) {
+
   }
 
   //this one is muy bien!
   getContentObs():Observable<IAnimals[]>{
-    return of(animells);
+    return this.http.get<IAnimals[]>("api/anime");
   } 
-
-  gobblyShark():Observable<IAnimals[]>{
-    return of(animells);
+  addContent(newContentItem: IAnimals):Observable<IAnimals>{
+    return this.http.post<IAnimals>("api/anime",newContentItem, this.httpOptions);
+  }
+  updateContent(contentItem:IAnimals):Observable<any>{
+    return this.http.put("api/anime",contentItem,this.httpOptions);
   }
 }

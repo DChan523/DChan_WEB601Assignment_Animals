@@ -24,5 +24,19 @@ export class ContentListComponent implements OnInit {
   }
   ngOnInit(): void {
   }
+  getAnimalFromServer():void{
+    this.animalService.getContentObs().subscribe(animalArray => this.animells = animalArray);
+  }
 
+  addContentToList(newContentItem:IAnimals):void{
+    this.animalService.addContent(newContentItem).subscribe(newContentFromServer =>{
+      this.animells.push(newContentFromServer);
+      this.animells = [...this.animells];
+    });
+  }
+  updateContentInList(contentItem:IAnimals):void{
+    this.animalService.updateContent(contentItem).subscribe(()=>{
+      this.getAnimalFromServer();
+    })
+  }
 }

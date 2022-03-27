@@ -1,6 +1,5 @@
 import { IAnimals } from "./content-interface";
 
-
     export const animells:IAnimals[] = [{
       id:1,
       title:"ayeaye",
