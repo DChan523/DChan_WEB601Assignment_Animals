@@ -1,0 +1,24 @@
+
+<div>
+    id(FOR UPDATING PLS): <input #id>
+</div>
+<div>
+    title: <input #title>
+</div>
+
+<div>
+    description: <input #description>
+</div>
+<div>
+    creator: <input #creator>
+</div>
+<div>
+    imgUrl: <input #imgURL>
+</div>
+<div>
+    type: <input #type>
+</div>
+<div>
+    <button (click)="addContent(title.value,description.value,creator.value,imgURL.value,type.value )">Add Food Item</button>
+    <button (click)="updateContent(id.value,title.value,description.value,creator.value,imgURL.value,type.value)">Update Food Item</button>
+</div>
