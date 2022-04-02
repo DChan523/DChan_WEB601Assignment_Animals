@@ -28,6 +28,9 @@
     <input matInput #type>
 </mat-form-field>
 
+<div id="newBoi">
+    <button mat-raised-button (click)="openDialog()">Add New Content</button>
+</div>
 <div id="button">
     <button mat-raised-button color="primary" (click)="addContent(title.value,description.value,creator.value,imgURL.value,type.value )">Add Food Item</button>
     <button mat-raised-button color="accent" (click)="updateContent(id.value,title.value,description.value,creator.value,imgURL.value,type.value)">Update Food Item</button>

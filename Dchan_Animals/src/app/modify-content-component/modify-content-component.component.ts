@@ -1,6 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 import { IAnimals } from '../helper-files/content-interface';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-modify-content-component',
@@ -12,10 +13,15 @@ export class ModifyContentComponentComponent implements OnInit {
   @Output() updateAnimalEvent: EventEmitter<IAnimals> = new EventEmitter<IAnimals>();
  
   newAnimal?:IAnimals; //new animals!!! of whateever my interface is now
-  constructor() { }
+  constructor(public dialog:MatDialog) { }
 
   ngOnInit(): void {
   }
+  
+  openDialog(){
+    this.dialog.open(ModifyContentComponentComponent);
+  }
+
   //something about adding content
   addContent(title:string,description:string,creator:string,imgURL:string,type:string){
     this.newAnimal = {
