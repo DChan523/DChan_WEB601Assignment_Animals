@@ -1,5 +1,17 @@
 <!--FANCY COMPONENTS OR SOMETHING-->
 <mat-slide-toggle>Slide me!</mat-slide-toggle>
+<mat-form-field appearance="fill">
+    <mat-label>Message</mat-label>
+    <input matInput value="Disco party!" #message>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Action</mat-label>
+    <input matInput value="Dance" #action>
+  </mat-form-field>
+  
+  <button mat-stroked-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+  
 <!--FANCY COMPONENTS OR SOMETHING-->
 <div id="newBoi">
     <button mat-raised-button (click)="openDialog()">Add New Content</button>
