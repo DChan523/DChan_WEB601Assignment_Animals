@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule} from '@angular/material/button';
 import { MatInputModule} from '@angular/material/input';
 import { MatDialogModule} from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { MatDialogModule} from '@angular/material/dialog';
     HoverAffectDirective,
     AppMessagesComponent,
     ModifyContentComponentComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,

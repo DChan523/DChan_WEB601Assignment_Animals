@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 import { IAnimals } from '../helper-files/content-interface';
 import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-modify-content-component',
@@ -17,9 +18,9 @@ export class ModifyContentComponentComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
   openDialog(){
-    this.dialog.open(ModifyContentComponentComponent);
+    this.dialog.open(DialogComponent);
   }
 
   //something about adding content
