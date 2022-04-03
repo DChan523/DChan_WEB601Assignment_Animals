@@ -11,5 +11,5 @@ export class DialogComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  //ADD THE MODIFY COINTENT FUNCTIONS IN HERE
 }
