@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IAnimals } from '../helper-files/content-interface';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog',
@@ -12,7 +12,9 @@ export class DialogComponent implements OnInit {
   // @Output() updateAnimalEvent: EventEmitter<IAnimals> = new EventEmitter<IAnimals>();
  
   // newAnimal?:IAnimals; //new animals!!! of whateever my interface is now
-  // constructor() { }
+  constructor(public dialogRef: MatDialogRef<DialogComponent>) {
+    
+  }
 
   ngOnInit(): void {
   }
