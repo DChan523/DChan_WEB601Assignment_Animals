@@ -1,7 +1,7 @@
-<h1 matDialogTitle>TOMATO</h1>
+<h1 matDialogTitle>Add Animal</h1>
 <mat-form-field>
-    <mat-label>id(FOR UPDATING PLS):</mat-label>
-    <input matInput #id>
+    <mat-label>id:</mat-label>
+    <input matInput  disabled #id>
 </mat-form-field>
 
 <mat-form-field>
@@ -30,8 +30,8 @@
 </mat-form-field>
 
 <div id="button">
-    <button mat-raised-button color="primary" >Add Food Item</button>
-    <button mat-button mat-dialog-close color="accent" >CLOSE</button>
+    <button mat-raised-button mat-dialog-close color="primary" >Add Food Item</button>
+    <button mat-raised-button mat-dialog-close color="accent" >CLOSE</button>
 </div>
 <!-- (click)="addContent(title.value,description.value,creator.value,imgURL.value,type.value )"
 (click)="updateContent(id.value,title.value,description.value,creator.value,imgURL.value,type.value)" -->

@@ -14,6 +14,8 @@ import { MatButtonModule} from '@angular/material/button';
 import { MatInputModule} from '@angular/material/input';
 import { MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { DialogComponent } from './dialog/dialog.component';
     MatButtonModule,
     MatInputModule,
     MatDialogModule,
+    MatCardModule,
+    MatSlideToggleModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation:false,
       delay: 2000
