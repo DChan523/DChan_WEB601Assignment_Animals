@@ -19,6 +19,7 @@ export class DialogComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  //this stuff doesnt work
   addContent(title:string,description:string,creator:string,imgURL:string,type:string){
     this.newAnimal = {
       title:title,
