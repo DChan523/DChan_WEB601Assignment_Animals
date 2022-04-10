@@ -13,7 +13,12 @@ const routes: Routes =[
     component:HomeComponent
   },
   {
-    path: "content/:id",component: ContentDetailComponent
+    path: "content/:id",
+    component: ContentDetailComponent
+  },
+  {
+    path:"content/list",
+    component:ContentListComponent
   },
   {
     path:"content",
