@@ -11,3 +11,4 @@
         <span appHoverAffect class="tag" *ngFor="let tag of animal.tags">{{tag}}</span>
     </mat-card-content><br>
 </mat-card>
+<a [routerLink]="['/content',animal?.id ?? 0]" routerLinkActive="active">CONTENT DETAILS</a>

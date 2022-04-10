@@ -17,7 +17,10 @@ import { DialogComponent } from './dialog/dialog.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-
+import { AppRoutingModule } from './app-routing.module';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     AppMessagesComponent,
     ModifyContentComponentComponent,
     DialogComponent,
+    ContentDetailComponent,
+    HomeComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +44,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatCardModule,
     MatSlideToggleModule,
     MatSnackBarModule,
+    AppRoutingModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation:false,
       delay: 2000
