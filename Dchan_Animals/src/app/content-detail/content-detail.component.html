@@ -1,1 +1,13 @@
-<p>content-detail works!</p>
+<mat-card *ngIf="animal">
+    <mat-card-title>{{animal.title}}</mat-card-title><br>
+    <img *ngIf="animal.imgURL"[src]="animal.imgURL">
+    <img *ngIf="!animal.imgURL" src="https://tonsmb.org/wp-content/uploads/2014/03/default-placeholder.png">    
+    <mat-card-content>Description:{{animal.description}}</mat-card-content>
+    <mat-card-content>Creator:{{animal.creator}}</mat-card-content>
+    <mat-card-content *ngIf="animal.type">
+        <span appHoverAffect [eggs]>Type:{{animal.type}}</span>
+    </mat-card-content>
+    <mat-card-content *ngIf="animal.tags">
+        <span appHoverAffect class="tag" *ngFor="let tag of animal.tags">{{tag}}</span>
+    </mat-card-content><br>
+</mat-card>

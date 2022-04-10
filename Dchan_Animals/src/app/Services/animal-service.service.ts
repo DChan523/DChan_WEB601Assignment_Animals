@@ -21,6 +21,10 @@ export class AnimalServiceService {
   getContentObs():Observable<IAnimals[]>{
     return this.http.get<IAnimals[]>("api/anime");
   } 
+  getContentItem(id: number): Observable<IAnimals>{
+    console.log("Retrieving OBSERVABLE content item");
+    return this.http.get<IAnimals>("api/food/" + id);
+  }
   addContent(newContentItem: IAnimals):Observable<IAnimals>{
     return this.http.post<IAnimals>("api/anime",newContentItem, this.httpOptions);
   }
